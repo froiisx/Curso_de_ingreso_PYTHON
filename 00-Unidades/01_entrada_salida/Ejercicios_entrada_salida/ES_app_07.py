@@ -49,17 +49,65 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        pass
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+
+        operador_a =int(operador_a)
+        operador_b =int(operador_b)
+
+        resultado = operador_a + operador_b
+
+        alert("Datos", f"El resultado de la suma de {operador_a } y {operador_b} es: {resultado}")
+        self.txt_operador_a.delete(0,"end")
+        self.txt_operador_b.delete(0,"end")
+
+
 
     def btn_restar_on_click(self):
-        pass
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+
+        operador_a = int(operador_a)
+        operador_b = int(operador_b)
+
+        resultado = operador_a - operador_b
+
+        alert("Datos", f"El resultado de la resta de {operador_a} y {operador_b} es: {resultado}")
+        self.txt_operador_a.delete(0,"end")
+        self.txt_operador_b.delete(0,"end")
+
+
 
     def btn_multiplicar_on_click(self):
-        pass
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+
+        operador_a = int(operador_a)
+        operador_b = int(operador_b)
+
+        resultado = operador_a * operador_b
+
+        alert("Datos", f"El resultado de la multiplicaion de {operador_a} y {operador_b} es: {resultado}")
+        self.txt_operador_a.delete(0,"end")
+        self.txt_operador_b.delete(0,"end")
+
+
 
     def btn_dividir_on_click(self):
-        pass
-        
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+
+        operador_a = int(operador_a)
+        operador_b = int(operador_b)
+
+        resultado = operador_a // operador_b
+
+        alert("Datos", f"El resultado de la division de {operador_a} y {operador_b} es: {resultado}")
+
+        self.txt_operador_a.delete(0,"end")
+        self.txt_operador_b.delete(0,"end")
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
