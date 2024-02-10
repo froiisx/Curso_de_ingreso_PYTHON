@@ -39,7 +39,18 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        altura = self.txt_altura.get()
+        altura_float = float(altura)
+
+        if altura_float < 160:
+            alert("Datos", "Es un base")
+        elif altura_float < 180:
+            alert("Datos", "Es un escolta")
+        elif altura_float < 200:
+            alert("Datos", "Es un alero")
+        else:
+            alert("Datos", "Es un ala-pivot o un pivot")
+
 
         
         

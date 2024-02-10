@@ -34,7 +34,16 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, padx=30, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        importe = self.txt_importe.get()
+        importe_float = float(importe)
+
+
+        resultado = importe_float * 20
+        
+        resultado_2 = resultado / 100
+
+        resultado_3 = importe_float - resultado_2 
+        alert("Datos", f"El importe es {resultado_3}")
 
 
 if __name__ == "__main__":
